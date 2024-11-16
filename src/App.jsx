@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import AnimatedToast from './components/Animations and Toast Options'
+import BasicToast from './components/Basic Toast Notification'
+import ToastPosition from './components/Configuring Toast Position'
+import CustomThemeToast from './components/Custom Toast Theme'
+import DismissToast from './components/Dismissing Toasts'
+import ErrorToast from './components/Error and Custom Toasts'
+import LoadingToast from './components/Loading States with Toasts'
+import MultiToast from './components/Multi-Toast Notifications'
+import PersistentToast from './components/Persistent and Updateable Toasts'
+import CustomContentToast from './components/Toast with JSX Content'
+import PromiseToast from './components/Toast with Promise'
+// import ReduxToast from './components/State Management'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   <div>
+    <BasicToast/>
+    <ErrorToast/>
+    <PromiseToast/>
+    <ToastPosition/>
+    <CustomContentToast/>
+    <DismissToast/>
+    <CustomThemeToast/>
+    <LoadingToast/>
+    <PersistentToast/>
+    <MultiToast/>
+    {/* <ReduxToast/> */}
+    <AnimatedToast/>
+   </div>
   )
 }
 
